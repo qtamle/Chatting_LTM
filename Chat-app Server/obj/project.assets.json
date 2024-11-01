@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HK6\\An Cap An Trom\\Tesst\\Chat-app Server\\Chat-app Server.csproj",
+      "projectUniqueName": "D:\\HK6\\Lập Trình Mạng\\TiểuLuan\\Chatting-And-Drawing\\Chat-app Server\\Chat-app Server.csproj",
       "projectName": "Chat-app Server",
-      "projectPath": "D:\\HK6\\An Cap An Trom\\Tesst\\Chat-app Server\\Chat-app Server.csproj",
+      "projectPath": "D:\\HK6\\Lập Trình Mạng\\TiểuLuan\\Chatting-And-Drawing\\Chat-app Server\\Chat-app Server.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\HK6\\An Cap An Trom\\Tesst\\Chat-app Server\\obj\\",
+      "outputPath": "D:\\HK6\\Lập Trình Mạng\\TiểuLuan\\Chatting-And-Drawing\\Chat-app Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -58,8 +58,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\HK6\\An Cap An Trom\\Tesst\\Communicator\\Communicator.csproj": {
-              "projectPath": "D:\\HK6\\An Cap An Trom\\Tesst\\Communicator\\Communicator.csproj"
+            "D:\\HK6\\Lập Trình Mạng\\TiểuLuan\\Chatting-And-Drawing\\Communicator\\Communicator.csproj": {
+              "projectPath": "D:\\HK6\\Lập Trình Mạng\\TiểuLuan\\Chatting-And-Drawing\\Communicator\\Communicator.csproj"
             }
           }
         }

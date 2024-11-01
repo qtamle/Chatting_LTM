@@ -20,3 +20,15 @@ D:\HK6\An Cap An Trom\Tesst\Communicator\obj\Debug\net6.0\Communicator.dll
 D:\HK6\An Cap An Trom\Tesst\Communicator\obj\Debug\net6.0\refint\Communicator.dll
 D:\HK6\An Cap An Trom\Tesst\Communicator\obj\Debug\net6.0\Communicator.pdb
 D:\HK6\An Cap An Trom\Tesst\Communicator\obj\Debug\net6.0\ref\Communicator.dll
+D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Communicator\bin\Debug\net6.0\Communicator.deps.json
+D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Communicator\bin\Debug\net6.0\Communicator.dll
+D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Communicator\bin\Debug\net6.0\Communicator.pdb
+D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Communicator\obj\Debug\net6.0\Communicator.GeneratedMSBuildEditorConfig.editorconfig
+D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Communicator\obj\Debug\net6.0\Communicator.AssemblyInfoInputs.cache
+D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Communicator\obj\Debug\net6.0\Communicator.AssemblyInfo.cs
+D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Communicator\obj\Debug\net6.0\Communicator.csproj.CoreCompileInputs.cache
+D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Communicator\obj\Debug\net6.0\Communicator.sourcelink.json
+D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Communicator\obj\Debug\net6.0\Communicator.dll
+D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Communicator\obj\Debug\net6.0\refint\Communicator.dll
+D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Communicator\obj\Debug\net6.0\Communicator.pdb
+D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Communicator\obj\Debug\net6.0\ref\Communicator.dll

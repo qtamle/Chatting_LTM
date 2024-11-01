@@ -1,0 +1,341 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{99D65DE9-5E8E-471E-8218-DA4364D33766}|Chat-app Server\\Chat-app Server.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\chat-app server\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99D65DE9-5E8E-471E-8218-DA4364D33766}|Chat-app Server\\Chat-app Server.csproj|solutionrelative:chat-app server\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D65DE9-5E8E-471E-8218-DA4364D33766}|Chat-app Server\\Chat-app Server.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\chat-app server\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{99D65DE9-5E8E-471E-8218-DA4364D33766}|Chat-app Server\\Chat-app Server.csproj|solutionrelative:chat-app server\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\chat-app client\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|solutionrelative:chat-app client\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\chat-app client\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|solutionrelative:chat-app client\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\chat-app client\\signin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|solutionrelative:chat-app client\\signin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\chat-app client\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|solutionrelative:chat-app client\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\chat-app client\\groupcreator.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|solutionrelative:chat-app client\\groupcreator.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\chat-app client\\chatbox.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|solutionrelative:chat-app client\\chatbox.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\chat-app client\\imageview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|solutionrelative:chat-app client\\imageview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\chat-app client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|solutionrelative:chat-app client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D65DE9-5E8E-471E-8218-DA4364D33766}|Chat-app Server\\Chat-app Server.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\chat-app server\\server.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99D65DE9-5E8E-471E-8218-DA4364D33766}|Chat-app Server\\Chat-app Server.csproj|solutionrelative:chat-app server\\server.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F365EE51-E430-4337-9FC1-F018B38B0B3A}|Communicator\\Communicator.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\communicator\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F365EE51-E430-4337-9FC1-F018B38B0B3A}|Communicator\\Communicator.csproj|solutionrelative:communicator\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F365EE51-E430-4337-9FC1-F018B38B0B3A}|Communicator\\Communicator.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\communicator\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F365EE51-E430-4337-9FC1-F018B38B0B3A}|Communicator\\Communicator.csproj|solutionrelative:communicator\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D65DE9-5E8E-471E-8218-DA4364D33766}|Chat-app Server\\Chat-app Server.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\chat-app server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99D65DE9-5E8E-471E-8218-DA4364D33766}|Chat-app Server\\Chat-app Server.csproj|solutionrelative:chat-app server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F365EE51-E430-4337-9FC1-F018B38B0B3A}|Communicator\\Communicator.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\communicator\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F365EE51-E430-4337-9FC1-F018B38B0B3A}|Communicator\\Communicator.csproj|solutionrelative:communicator\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\chat-app client\\groupcreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|solutionrelative:chat-app client\\groupcreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\chat-app client\\chat-app client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9398E58C-5FF7-4D37-8771-D6831E3ECE84}|Chat-app Client\\Chat-app Client.csproj|solutionrelative:chat-app client\\chat-app client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F365EE51-E430-4337-9FC1-F018B38B0B3A}|Communicator\\Communicator.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\communicator\\communicator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F365EE51-E430-4337-9FC1-F018B38B0B3A}|Communicator\\Communicator.csproj|solutionrelative:communicator\\communicator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D65DE9-5E8E-471E-8218-DA4364D33766}|Chat-app Server\\Chat-app Server.csproj|d:\\hk6\\l\u1EADp tr\u00ECnh m\u1EA1ng\\ti\u1EC3uluan\\chatting-and-drawing\\chat-app server\\chat-app server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{99D65DE9-5E8E-471E-8218-DA4364D33766}|Chat-app Server\\Chat-app Server.csproj|solutionrelative:chat-app server\\chat-app server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Server.cs",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Server\\Server.cs",
+              "RelativeDocumentMoniker": "Chat-app Server\\Server.cs",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Server\\Server.cs",
+              "RelativeToolTip": "Chat-app Server\\Server.cs",
+              "ViewState": "AgIAAL8AAAAAAAAAAAAkwLQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:55:42.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Server.cs [Design]",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Server\\Server.cs",
+              "RelativeDocumentMoniker": "Chat-app Server\\Server.cs",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Server\\Server.cs [Design]",
+              "RelativeToolTip": "Chat-app Server\\Server.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:55:40.343Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Signin.cs",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\Signin.cs",
+              "RelativeDocumentMoniker": "Chat-app Client\\Signin.cs",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\Signin.cs",
+              "RelativeToolTip": "Chat-app Client\\Signin.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwG4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:55:29.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Signin.cs [Design]",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\Signin.cs",
+              "RelativeDocumentMoniker": "Chat-app Client\\Signin.cs",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\Signin.cs [Design]",
+              "RelativeToolTip": "Chat-app Client\\Signin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:55:22.876Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\Program.cs",
+              "RelativeDocumentMoniker": "Chat-app Client\\Program.cs",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\Program.cs",
+              "RelativeToolTip": "Chat-app Client\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:54:32.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ChatBox.Designer.cs",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\ChatBox.Designer.cs",
+              "RelativeDocumentMoniker": "Chat-app Client\\ChatBox.Designer.cs",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\ChatBox.Designer.cs",
+              "RelativeToolTip": "Chat-app Client\\ChatBox.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:53:48.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.Designer.cs",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\Login.Designer.cs",
+              "RelativeDocumentMoniker": "Chat-app Client\\Login.Designer.cs",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\Login.Designer.cs",
+              "RelativeToolTip": "Chat-app Client\\Login.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:53:44.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ImageView.Designer.cs",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\ImageView.Designer.cs",
+              "RelativeDocumentMoniker": "Chat-app Client\\ImageView.Designer.cs",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\ImageView.Designer.cs",
+              "RelativeToolTip": "Chat-app Client\\ImageView.Designer.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:53:40.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GroupCreator.Designer.cs",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\GroupCreator.Designer.cs",
+              "RelativeDocumentMoniker": "Chat-app Client\\GroupCreator.Designer.cs",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\GroupCreator.Designer.cs",
+              "RelativeToolTip": "Chat-app Client\\GroupCreator.Designer.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:53:37.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Signin.Designer.cs",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\Signin.Designer.cs",
+              "RelativeDocumentMoniker": "Chat-app Client\\Signin.Designer.cs",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\Signin.Designer.cs",
+              "RelativeToolTip": "Chat-app Client\\Signin.Designer.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:53:33.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Communicator\\Startup.cs",
+              "RelativeDocumentMoniker": "Communicator\\Startup.cs",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Communicator\\Startup.cs",
+              "RelativeToolTip": "Communicator\\Startup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:53:19.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Messages.cs",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Communicator\\Messages.cs",
+              "RelativeDocumentMoniker": "Communicator\\Messages.cs",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Communicator\\Messages.cs",
+              "RelativeToolTip": "Communicator\\Messages.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:53:17.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Server.Designer.cs",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Server\\Server.Designer.cs",
+              "RelativeDocumentMoniker": "Chat-app Server\\Server.Designer.cs",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Server\\Server.Designer.cs",
+              "RelativeToolTip": "Chat-app Server\\Server.Designer.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwJMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:53:04.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Server\\Program.cs",
+              "RelativeDocumentMoniker": "Chat-app Server\\Program.cs",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Server\\Program.cs",
+              "RelativeToolTip": "Chat-app Server\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:52:48.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GroupCreator.cs [Design]",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\GroupCreator.cs",
+              "RelativeDocumentMoniker": "Chat-app Client\\GroupCreator.cs",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\GroupCreator.cs [Design]",
+              "RelativeToolTip": "Chat-app Client\\GroupCreator.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T05:06:25.242Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Group.cs",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Communicator\\Group.cs",
+              "RelativeDocumentMoniker": "Communicator\\Group.cs",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Communicator\\Group.cs",
+              "RelativeToolTip": "Communicator\\Group.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T05:06:11.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Chat-app Client.csproj",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\Chat-app Client.csproj",
+              "RelativeDocumentMoniker": "Chat-app Client\\Chat-app Client.csproj",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Client\\Chat-app Client.csproj",
+              "RelativeToolTip": "Chat-app Client\\Chat-app Client.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-01T05:04:10.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Communicator.csproj",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Communicator\\Communicator.csproj",
+              "RelativeDocumentMoniker": "Communicator\\Communicator.csproj",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Communicator\\Communicator.csproj",
+              "RelativeToolTip": "Communicator\\Communicator.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-01T05:04:10.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Chat-app Server.csproj",
+              "DocumentMoniker": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Server\\Chat-app Server.csproj",
+              "RelativeDocumentMoniker": "Chat-app Server\\Chat-app Server.csproj",
+              "ToolTip": "D:\\HK6\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\Ti\u1EC3uLuan\\Chatting-And-Drawing\\Chat-app Server\\Chat-app Server.csproj",
+              "RelativeToolTip": "Chat-app Server\\Chat-app Server.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-01T05:04:08.304Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
