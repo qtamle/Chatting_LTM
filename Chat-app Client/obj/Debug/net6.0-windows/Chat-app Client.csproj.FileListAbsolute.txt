@@ -1,0 +1,50 @@
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.exe
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.deps.json
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.runtimeconfig.json
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.dll
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.pdb
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\bin\Debug\net6.0-windows\Communicator.dll
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\bin\Debug\net6.0-windows\Communicator.pdb
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.csproj.AssemblyReference.cache
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.ChatBox.resources
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.GroupCreator.resources
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.ImageView.resources
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.Login.resources
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.Properties.Resources.resources
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.Signin.resources
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.csproj.GenerateResource.cache
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.GeneratedMSBuildEditorConfig.editorconfig
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.AssemblyInfoInputs.cache
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.AssemblyInfo.cs
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.csproj.CoreCompileInputs.cache
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\obj\Debug\net6.0-windows\Chat-app.E0B9E6C0.Up2Date
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.dll
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\obj\Debug\net6.0-windows\refint\Chat-app Client.dll
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.pdb
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.genruntimeconfig.cache
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Client\obj\Debug\net6.0-windows\ref\Chat-app Client.dll
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.exe
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.deps.json
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.runtimeconfig.json
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.dll
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.pdb
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\bin\Debug\net6.0-windows\Communicator.dll
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\bin\Debug\net6.0-windows\Communicator.pdb
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.csproj.AssemblyReference.cache
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.ChatBox.resources
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.GroupCreator.resources
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.ImageView.resources
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.Login.resources
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.Properties.Resources.resources
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.Signin.resources
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.csproj.GenerateResource.cache
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.GeneratedMSBuildEditorConfig.editorconfig
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.AssemblyInfoInputs.cache
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.AssemblyInfo.cs
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.csproj.CoreCompileInputs.cache
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\obj\Debug\net6.0-windows\Chat-app.E0B9E6C0.Up2Date
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.dll
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\obj\Debug\net6.0-windows\refint\Chat-app Client.dll
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.pdb
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.genruntimeconfig.cache
+D:\HK6\An Cap An Trom\Tesst\Chat-app Client\obj\Debug\net6.0-windows\ref\Chat-app Client.dll
