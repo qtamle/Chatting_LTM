@@ -1,0 +1,40 @@
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.exe
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.deps.json
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.runtimeconfig.json
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.dll
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.pdb
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\bin\Debug\net6.0-windows\Communicator.dll
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\bin\Debug\net6.0-windows\Communicator.pdb
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.csproj.AssemblyReference.cache
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\obj\Debug\net6.0-windows\Chat_app_Server.Server.resources
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.csproj.GenerateResource.cache
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.GeneratedMSBuildEditorConfig.editorconfig
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.AssemblyInfoInputs.cache
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.AssemblyInfo.cs
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.csproj.CoreCompileInputs.cache
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\obj\Debug\net6.0-windows\Chat-app.B05670A3.Up2Date
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.dll
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\obj\Debug\net6.0-windows\refint\Chat-app Server.dll
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.pdb
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.genruntimeconfig.cache
+D:\HK6\An Cap An Trom\Chat-app-master\Chat-app Server\obj\Debug\net6.0-windows\ref\Chat-app Server.dll
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.exe
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.deps.json
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.runtimeconfig.json
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.dll
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.pdb
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\bin\Debug\net6.0-windows\Communicator.dll
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\bin\Debug\net6.0-windows\Communicator.pdb
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.csproj.AssemblyReference.cache
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\obj\Debug\net6.0-windows\Chat_app_Server.Server.resources
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.csproj.GenerateResource.cache
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.GeneratedMSBuildEditorConfig.editorconfig
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.AssemblyInfoInputs.cache
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.AssemblyInfo.cs
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.csproj.CoreCompileInputs.cache
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\obj\Debug\net6.0-windows\Chat-app.B05670A3.Up2Date
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.dll
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\obj\Debug\net6.0-windows\refint\Chat-app Server.dll
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.pdb
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.genruntimeconfig.cache
+D:\HK6\An Cap An Trom\Tesst\Chat-app Server\obj\Debug\net6.0-windows\ref\Chat-app Server.dll
