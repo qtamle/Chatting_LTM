@@ -36,30 +36,40 @@ namespace Chat_app_Client
                 return;
             }
 
-            ipe = new IPEndPoint(IPAddress.Parse(txtSigninIP.Text), 2009);
-            server = new TcpClient();
+            try
+            {
+                ipe = new IPEndPoint(IPAddress.Parse(txtSigninIP.Text), 2009);
+                server = new TcpClient();
 
-            server.Connect(ipe);
+                server.Connect(ipe);
 
-            streamReader = new StreamReader(server.GetStream());
-            streamWriter = new StreamWriter(server.GetStream());
+                streamReader = new StreamReader(server.GetStream());
+                streamWriter = new StreamWriter(server.GetStream());
 
-            // Khởi tạo luồng đợi phản hồi đăng ký.
-            var threadSign = new Thread(new ThreadStart(waitForSigninFeedback));
-            threadSign.IsBackground = true;
-            threadSign.Start();
+                // Khởi tạo luồng đợi phản hồi đăng ký.
+                var threadSign = new Thread(new ThreadStart(waitForSigninFeedback));
+                threadSign.IsBackground = true;
+                threadSign.Start();
+            } 
+            catch (Exception ex)
+            {
+                // Hiển thị thông báo lỗi nếu không kết nối được tới server.
+                MessageBox.Show("Cannot connect to server", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
         }
 
         private void waitForSigninFeedback()
         {
             Account account = new Account(txtSigninUsername.Text, txtSigninPassword.Text);
             String accountJson = JsonSerializer.Serialize(account);
-            Json json = new Json("SIGNIN", accountJson);
+            CommandMsg json = new CommandMsg("SIGNIN", accountJson);
 
             sendJson(json);
 
             accountJson = streamReader.ReadLine();
-            Json? feedback = JsonSerializer.Deserialize<Json?>(accountJson);
+            CommandMsg? feedback = JsonSerializer.Deserialize<CommandMsg?>(accountJson);
 
             try
             {
@@ -91,7 +101,7 @@ namespace Chat_app_Client
             }
         }
 
-        private void sendJson(Json json)
+        private void sendJson(CommandMsg json)
         {
             byte[] jsonUtf8Bytes = JsonSerializer.SerializeToUtf8Bytes(json);
             String S = Encoding.ASCII.GetString(jsonUtf8Bytes, 0, jsonUtf8Bytes.Length);

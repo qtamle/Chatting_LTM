@@ -1,36 +1,60 @@
+﻿using Chat_app_Server.DATA;
 using Communicator;
+using LiteDB;
 using Microsoft.VisualBasic.ApplicationServices;
 using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Net.Sockets;
+using System.Net.WebSockets;
+using System.Reflection.Metadata;
+using System.Security.Cryptography;
+using System.Security.Principal;
 using System.Text;
 using System.Text.Json;
 using System.Windows.Forms;
 using System.Xml;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace Chat_app_Server
 {
     public partial class Server : Form
     {
+
         private bool active = true;
         private IPEndPoint iep;
         private TcpListener server;
-        private Dictionary<String, String> USER;
-        private Dictionary<String, List<String>> GROUP;
-        private Dictionary<String, TcpClient> CLIENT;
+        //private Dictionary<String, String> USER;
+        //private Dictionary<String, List<String>> GROUP;
+        private Dictionary<String, TcpClient> TCP_CLIENTS;
+
+        // Danh sách người dùng
+        private ILiteCollection<Account> _accounts;
+        // Danh sách nhóm
+        private ILiteCollection<Group> _groups;
+        private ILiteCollection<ChatMsg> _chatMessages;
 
         public Server()
         {
             InitializeComponent();
         }
 
+        BindingSource _srcUsers = new BindingSource();
+        BindingSource _srcGroups = new BindingSource();
+
         private void Server_Load(object sender, EventArgs e)
         {
+            _accounts = LiteDbContext.Db.GetCollection<Account>();
+            _groups = LiteDbContext.Db.GetCollection<Group>();
+            _chatMessages = LiteDbContext.Db.GetCollection<ChatMsg>();
+
             String IP = null;
+            // Lấy thông số IP hiện tại của máy
             var host = Dns.GetHostByName(Dns.GetHostName());
+            // Duyệt qua danh sách IP
             foreach (var ip in host.AddressList)
             {
+                // Chọn ra IP dạng IPv4
                 if (ip.ToString().Contains('.'))
                 {
                     IP = ip.ToString();
@@ -45,45 +69,113 @@ namespace Chat_app_Server
             txtPort.Text = "2009";
 
             userInitialize();
+
+            // Load danh sách người dùng
+            dgvUsers.DataSource = _srcUsers;
+            dgvUsers.ReadOnly = true;
+            dgvUsers.AllowUserToAddRows = false;
+            LoadGridUsers();
+
+            // Load danh sách nhóm
+            dgvGroups.DataSource = _srcGroups;
+            dgvGroups.ReadOnly = true;
+            dgvGroups.AllowUserToAddRows = false;
+            LoadGridGroups();
+
+            // 
+            btnStart_Click(sender, e);
+        }
+
+        private void LoadGridGroups()
+        {
+            var groups = _groups
+                .Query().Select(x => new Group()
+                {
+                    name = x.name,
+                    members = x.members
+                }).ToList();
+
+            _srcGroups.DataSource = groups;
+            _srcGroups.ResetBindings(true);
+        }
+
+        private void LoadGridUsers()
+        {
+            var accounts = _accounts
+               .Query().Select(x => new Account
+               {
+                   userName = x.userName,
+                   password = x.password,
+                   status = "Offline"
+               }).ToList();
+
+            _srcUsers.DataSource = accounts;
+            _srcUsers.ResetBindings(true);
+        }
+
+        private void updateLogInStatus(string userName)
+        {
+            var accounts = _srcUsers.DataSource as List<Account>;
+            
+            if (accounts == null)
+                return;
+            
+            foreach (var item in accounts)
+            {
+                if (item.userName == userName)
+                {
+                    item.status = "Online";
+                    break;
+                }
+            }
+
+            _srcUsers.DataSource = accounts;
+            _srcUsers.ResetBindings(true);
+        }
+
+        private void updateLogoutStatus(string userName)
+        {
+            var accounts = _srcUsers.DataSource as List<Account>;
+
+            if (accounts == null)
+                return;
+
+            foreach (var item in accounts)
+            {
+                if (item.userName == userName)
+                {
+                    item.status = "Offline";
+                    break;
+                }
+            }
+
+            _srcUsers.DataSource = accounts;
+            _srcUsers.ResetBindings(true);
         }
 
         private void userInitialize()
         {
-            USER = new Dictionary<String, String>();
-            GROUP = new Dictionary<String, List<String>>();
-            CLIENT = new Dictionary<String, TcpClient>();
-
-            for (char uName = 'A'; uName <= 'Z'; uName++)
-            {
-                String pass = "123";
-                USER.Add(uName.ToString(), pass);
-            }
-
-            for (int i = 0; i < 5; i++)
-            {
-                List<string> groupUser = new List<string>();
-                for (byte j = 0; j < 3; j++)
-                {
-                    char u = (Char)('A' + 3 * i + j);
-                    groupUser.Add(u.ToString());
-                }
-                if (!groupUser.Contains("A"))
-                {
-                    groupUser.Add("A");
-                }
-                GROUP.Add("Group " + i.ToString(), groupUser);
-            }
+            TCP_CLIENTS = new Dictionary<String, TcpClient>();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
             iep = new IPEndPoint(IPAddress.Parse(txtIP.Text), int.Parse(txtPort.Text));
             server = new TcpListener(iep);
-            server.Start();
 
-            Thread ServerThread = new Thread(new ThreadStart(ServerStart));
-            ServerThread.IsBackground = true;
-            ServerThread.Start();
+            try
+            {
+                server.Start();
+
+                Thread ServerThread = new Thread(new ThreadStart(ServerStart));
+                ServerThread.IsBackground = true;
+                ServerThread.Start();
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi xảy ra ! Không thể start máy chủ !", "Thông báo"
+                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void ServerStart()
@@ -111,8 +203,8 @@ namespace Chat_app_Server
         private void clientService(TcpClient client)
         {
             StreamReader streamReader = new StreamReader(client.GetStream());
-            String s = streamReader.ReadLine();
-            Json infoJson = JsonSerializer.Deserialize<Json>(s);
+            String msg = streamReader.ReadLine();
+            CommandMsg infoJson = JsonSerializer.Deserialize<CommandMsg>(msg);
 
             if (infoJson != null)
             {
@@ -132,8 +224,9 @@ namespace Chat_app_Server
                 bool threadActive = true;
                 while (threadActive && client != null)
                 {
-                    s = streamReader.ReadLine();
-                    infoJson = JsonSerializer.Deserialize<Json>(s);
+                    msg = streamReader.ReadLine();
+                    infoJson = JsonSerializer.Deserialize<CommandMsg>(msg);
+                    
                     if (infoJson != null && infoJson.content != null)
                     {
                         switch (infoJson.type)
@@ -156,17 +249,32 @@ namespace Chat_app_Server
                                     reponseFile(infoJson, client);
                                 }
                                 break;
+                            case "GET_OLD_MESSAGES":
+                                if (infoJson.content != null)
+                                {
+                                    responseOldMessage(infoJson, client);
+                                }
+                                break;
                             case "LOGOUT":
                                 if (infoJson.content != null)
                                 {
-                                    CLIENT[infoJson.content].Close();
-                                    CLIENT.Remove(infoJson.content);
+                                    TCP_CLIENTS[infoJson.content].Close();
+                                    TCP_CLIENTS.Remove(infoJson.content);
                                     AppendRichTextBox(infoJson.content + " logged out.");
+                                    
+                                    // Cập nhật trạng thái logout
+                                    if (InvokeRequired)
+                                    {
+                                        this.Invoke(new MethodInvoker(delegate () {
+                                            updateLogoutStatus(infoJson.content);
+                                        }));
+                                    }
+                                    
                                     threadActive = false;
 
-                                    foreach (String key in CLIENT.Keys)
+                                    foreach (String key in TCP_CLIENTS.Keys)
                                     {
-                                        startupClient(CLIENT[key], key);
+                                        startupClient(TCP_CLIENTS[key], key);
                                     }
                                 }
                                 break;
@@ -180,65 +288,181 @@ namespace Chat_app_Server
             }
         }
 
-        private void reponseSignin(Json infoJson, TcpClient client)
+        private void responseOldMessage(CommandMsg infoJson, TcpClient client)
         {
+            OldMsgRequest oldMsgRequest = JsonSerializer.Deserialize<OldMsgRequest>(infoJson.content);
+            
+            if (oldMsgRequest == null)
+                return;
+
+            List<ChatMsg> messages = new List<ChatMsg>();
+
+            // Chỉ lấy tin nhắn nhóm
+            if (oldMsgRequest.is_group_msg)
+            {
+                // Lấy tất cả tin người nhận là nhóm
+                var groupMessages = _chatMessages
+                   .Query()
+                   .Where(x => x.is_group_receive == true
+                       && (x.receiver == oldMsgRequest.receiver ))
+                   .ToList();
+                messages.AddRange(groupMessages);
+            }
+            else
+            {
+                // Lấy tất cả message thông thường được gửi tới người gửi
+                var msgs = _chatMessages
+                    .Query()
+                    .Where(x => x.is_group_receive != true
+                        && ((x.receiver == oldMsgRequest.sender && x.sender == oldMsgRequest.receiver) || (x.sender == oldMsgRequest.sender && x.receiver == oldMsgRequest.receiver)))
+                .ToList();
+                messages.AddRange(msgs);
+            }
+
+            messages = messages
+                .OrderBy(x => x.time)
+                .ToList();
+
+            String json = JsonSerializer.Serialize(messages);
+            CommandMsg notification = new CommandMsg("GET_OLD_MESSAGES_FEEDBACK", json);
+            // gởi thông điệp cho client
+            if (TCP_CLIENTS.ContainsKey(oldMsgRequest.sender))
+                sendJson(notification, client);
+        }
+
+        private void reponseSignin(CommandMsg infoJson, TcpClient client)
+        {
+            // Convert data nhận được thành đối tượng Account
             Account account = JsonSerializer.Deserialize<Account>(infoJson.content);
 
-            if (account != null && account.userName != null && !USER.ContainsKey(account.userName) && !CLIENT.ContainsKey(account.userName))
+            if (account == null || account.userName == null)
+                return;
+
+            // Kiểm tra nếu không tồn tại tài khoản này trên hệ thống
+            // Lấy tài khoản có trong CSDL
+            Account dbAccount = _accounts.FindOne(x => x.userName == account.userName);
+
+            if (dbAccount == null)
             {
-                Json notification = new Json("SIGNIN_FEEDBACK", "TRUE");
+                // Thêm tài khoản mới đăng ký vào CSDL
+
+                _accounts.Insert(account);
+                _accounts.EnsureIndex(x => x.userName);
+
+                // Hiển thị danh sách user mới lên grid
+                // Do hàm chạy trên thread nên cần invoke để thay
+                // đổi giá trị ở form chính
+                if (InvokeRequired)
+                {
+                    this.Invoke(new MethodInvoker(delegate () {
+                        LoadGridUsers();
+                    }));
+                }
+            } 
+            
+            // Nếu chưa tồn tại client
+
+            if (!TCP_CLIENTS.ContainsKey(account.userName))
+            {
+
+                TCP_CLIENTS.Add(account.userName, client);
+
+                // Tạo mới đối tượng Json để phản hồi cho Client
+                CommandMsg notification = new CommandMsg("SIGNIN_FEEDBACK", "TRUE");
+                // gởi thông điệp cho client
                 sendJson(notification, client);
+                // thêm vào textbox
                 AppendRichTextBox(account.userName + " signed in!");
 
-                USER.Remove(account.userName);
-                USER.Add(account.userName, account.password);
+                // Cập nhật trạng thái Login cho user
 
-                CLIENT.Remove(account.userName);
-                CLIENT.Add(account.userName, client);
-
-                foreach (String key in CLIENT.Keys)
+                if (InvokeRequired)
                 {
-                    startupClient(CLIENT[key], key);
+                    this.Invoke(new MethodInvoker(delegate () {
+                        updateLogInStatus(account.userName);
+                    }));
+                }
+
+                foreach (String key in TCP_CLIENTS.Keys)
+                {
+                    startupClient(TCP_CLIENTS[key], key);
                 }
             }
         }
 
-        private void reponseLogin(Json infoJson, TcpClient client)
+        private void reponseLogin(CommandMsg infoJson, TcpClient client)
         {
             Account account = JsonSerializer.Deserialize<Account>(infoJson.content);
-            if (account != null && account.userName != null && USER.ContainsKey(account.userName) && !CLIENT.ContainsKey(account.userName) && USER[account.userName] == account.password)
+
+            if (account == null || account.userName == null)
+                return;
+
+            // Kiểm tra nếu không tồn tại tài khoản này trên hệ thống
+            // Lấy tài khoản có trong CSDL
+            Account dbAccount = _accounts.FindOne(x => x.userName == account.userName);
+
+            if (dbAccount == null || dbAccount.password != account.password)
             {
-                Json notification = new Json("LOGIN_FEEDBACK", "TRUE");
+                CommandMsg notification = new CommandMsg("LOGIN_FEEDBACK", "FALSE");
+                sendJson(notification, client);
+                AppendRichTextBox(account.userName + " can not login!");
+            } 
+
+            // Nếu client này chưa kết nối
+            if (!TCP_CLIENTS.ContainsKey(account.userName))
+            {
+                CommandMsg notification = new CommandMsg("LOGIN_FEEDBACK", "TRUE");
                 sendJson(notification, client);
                 AppendRichTextBox(account.userName + " logged in!");
 
-                CLIENT.Remove(account.userName);
-                CLIENT.Add(account.userName, client);
-                
-                foreach(String key in CLIENT.Keys)
+                //TCP_CLIENTS.Remove(account.userName);
+
+                TCP_CLIENTS.Add(account.userName, client);
+
+                // Cập nhật trạng thái Login cho user
+
+                if (InvokeRequired)
                 {
-                    startupClient(CLIENT[key], key);
+                    this.Invoke(new MethodInvoker(delegate () {
+                        updateLogInStatus(account.userName);
+                    }));
+                }
+
+                foreach (String key in TCP_CLIENTS.Keys)
+                {
+                    startupClient(TCP_CLIENTS[key], key);
                 }
             }
-            else
+            else // Ngược lại thì client này đã kết nối
             {
-                Json notification = new Json("LOGIN_FEEDBACK", "FALSE");
+                CommandMsg notification = new CommandMsg("LOGIN_FEEDBACK", "FALSE");
                 sendJson(notification, client);
                 AppendRichTextBox(account.userName + " can not login!");
             }
         }
 
-        private void startupClient(TcpClient client, String name)
+        private void startupClient(TcpClient client, String clientName)
         {
-            List<String> onlUser = new List<string>(CLIENT.Keys);
-            onlUser.Remove(name);
+            // Lấy danh sách user online
+            List<String> onlUser = new List<string>(TCP_CLIENTS.Keys);
 
+            onlUser.Remove(clientName);
+
+            // Lấy danh sách group
             List<String> group = new List<string>();
-            foreach (String key in GROUP.Keys)
+
+            var localGroups = _groups
+                .Query()
+                .ToList();
+
+            foreach (Group item in localGroups)
             {
-                if (GROUP[key].Contains(name))
+                var groupMembers = item.members
+                       .Split(",", StringSplitOptions.RemoveEmptyEntries);
+
+                if (groupMembers.Contains(clientName))
                 {
-                    group.Add(key);
+                    group.Add(item.name);
                 }
             }
 
@@ -247,63 +471,101 @@ namespace Chat_app_Server
 
             Startup startup = new Startup(jsonUser, jsonGroup);
             String startupJson = JsonSerializer.Serialize(startup);
-            Json json = new Json("STARTUP_FEEDBACK", startupJson);
+            CommandMsg json = new CommandMsg("STARTUP_FEEDBACK", startupJson);
             sendJson(json, client);
         }
 
-        private void reponseMessage(Json infoJson)
+        private void reponseMessage(CommandMsg infoJson)
         {
-            Messages messages = JsonSerializer.Deserialize<Messages>(infoJson.content);
-            if (messages != null && CLIENT.ContainsKey(messages.receiver))
-            {
-                AppendRichTextBox(messages.sender + " to " + messages.receiver + ": " + messages.message);
+            ChatMsg msg = JsonSerializer.Deserialize<ChatMsg>(infoJson.content);
 
-                TcpClient receiver = CLIENT[messages.receiver];
-                sendJson(infoJson, receiver);
-                receiver = CLIENT[messages.sender];
-                sendJson(infoJson, receiver);
-            }
-            else
+            if (msg == null) return;
+
+            if (!msg.is_group_receive 
+                && TCP_CLIENTS.ContainsKey(msg.receiver))
             {
-                if (GROUP.ContainsKey(messages.receiver))
+                AppendRichTextBox(msg.sender + " to " + msg.receiver + ": " + msg.message);
+
+                // Gửi thông điệp cho receiver
+                TcpClient receiver = TCP_CLIENTS[msg.receiver];
+                sendJson(infoJson, receiver);
+
+                // Gửi thông điệp cho sender
+                receiver = TCP_CLIENTS[msg.sender];
+                sendJson(infoJson, receiver);
+
+                // Lưu chat message vào Db
+                _chatMessages.Insert(msg);
+
+
+            }
+            
+            if (msg.is_group_receive)
+            {
+                var localGroup = _groups.FindOne(x => x.name == msg.receiver);
+
+                if (localGroup != null)
                 {
-                    AppendRichTextBox(messages.sender + " to " + messages.receiver + ": " + messages.message);
-                    foreach (String user in GROUP[messages.receiver])
+                    AppendRichTextBox(msg.sender + " to " + msg.receiver + ": " + msg.message);
+                    
+                    var groupMembers = localGroup.members
+                        .Split(",", StringSplitOptions.RemoveEmptyEntries);
+
+                    // Duyệt qua tất cả thành viên trong nhóm
+
+                    foreach (String user in groupMembers)
                     {
-                        if (CLIENT.ContainsKey(user))
+                        if (TCP_CLIENTS.ContainsKey(user))
                         {
-                            TcpClient receiver = CLIENT[user];
+                            TcpClient receiver = TCP_CLIENTS[user];
                             sendJson(infoJson, receiver);
+                            _chatMessages.Insert(msg);
                         }
                     }
                 }
             }
         }
 
-        private void createGroup(Json infoJson)
+        private void createGroup(CommandMsg infoJson)
         {
-            List<string> groupUser = new List<string>();
+
             Group group = JsonSerializer.Deserialize<Group>(infoJson.content);
 
-            string[] values = group.members.Split(',');
+            string[] groupMembers = group
+                .members
+                .Split(',', StringSplitOptions.RemoveEmptyEntries);
 
-            for (int i = 0; i < values.Length; i++)
+            for (int i = 0; i < groupMembers.Length; i++)
             {
-                values[i] = values[i].Trim();
-                groupUser.Add(values[i]);
+                groupMembers[i] = groupMembers[i].Trim();
             }
 
-            GROUP.Add(group.name, groupUser);
-
-            foreach (String key in CLIENT.Keys)
+            Group localGroup = _groups.FindOne(x => x.name == group.name);
+            
+            if (localGroup == null)
             {
-                startupClient(CLIENT[key], key);
+                _groups.Insert(group);
+                _groups.EnsureIndex(x => x.name);
+            }
+
+            if (InvokeRequired)
+            {
+                this.Invoke(new MethodInvoker(delegate () {
+                    LoadGridGroups();
+                }));
+            }
+
+            //GROUP.Add(group.name, groupMembers.ToList());
+
+            foreach (String key in TCP_CLIENTS.Keys)
+            {
+                startupClient(TCP_CLIENTS[key], key);
             }
         }
 
-        private void reponseFile(Json infoJson, TcpClient client)
+        private void reponseFile(CommandMsg infoJson, TcpClient client)
         {
-            FileMessage fileMessage = JsonSerializer.Deserialize<FileMessage>(infoJson.content);
+            FileMsg fileMessage = JsonSerializer.Deserialize<FileMsg>(infoJson.content);
 
             try
             {
@@ -331,23 +593,28 @@ namespace Chat_app_Server
                 BufferFile bufferFile = new BufferFile(fileMessage.sender, fileMessage.receiver, buffer, fileMessage.extension);
 
                 String jsonString = JsonSerializer.Serialize(bufferFile);
-                Json json = new Json("FILE", jsonString);
+                CommandMsg json = new CommandMsg("FILE", jsonString);
 
-                if (CLIENT.ContainsKey(fileMessage.receiver))
+                if (TCP_CLIENTS.ContainsKey(fileMessage.receiver))
                 {
-                    TcpClient receiver = CLIENT[fileMessage.receiver];
+                    TcpClient receiver = TCP_CLIENTS[fileMessage.receiver];
                     sendJson(json, receiver);
                 }
 
                 else
                 {
-                    if (GROUP.ContainsKey(fileMessage.receiver))
+                    var localGroup = _groups.FindOne(x => x.name == fileMessage.receiver);
+
+                    if (localGroup != null)
                     {
-                        foreach (String user in GROUP[fileMessage.receiver])
+                        var groupMembers = localGroup.members
+                            .Split(",", StringSplitOptions.RemoveEmptyEntries);
+
+                        foreach (String user in groupMembers)
                         {
-                            if (CLIENT.ContainsKey(user))
+                            if (TCP_CLIENTS.ContainsKey(user))
                             {
-                                TcpClient receiver = CLIENT[user];
+                                TcpClient receiver = TCP_CLIENTS[user];
                                 sendJson(json, receiver);
                             }
                         }
@@ -360,7 +627,7 @@ namespace Chat_app_Server
             }
         }
 
-        private void sendJson(Json json, TcpClient client)
+        private void sendJson(CommandMsg json, TcpClient client)
         {
             byte[] jsonUtf8Bytes = JsonSerializer.SerializeToUtf8Bytes(json);
             StreamWriter streamWriter = new StreamWriter(client.GetStream());
@@ -392,9 +659,9 @@ namespace Chat_app_Server
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-            if (CLIENT.Count() > 0)
+            if (TCP_CLIENTS.Count() > 0)
             {
-                MessageBox.Show("The server has " + CLIENT.Count + " user(s) logged in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("The server has " + TCP_CLIENTS.Count + " user(s) logged in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             active = false;

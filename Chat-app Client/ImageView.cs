@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Chat_app_Client
 {
@@ -29,29 +30,35 @@ namespace Chat_app_Client
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            string fileName = @Environment.CurrentDirectory + "/" + String.Format("{0:yyyy-MM-dd HH-mm-ss}__{1}", DateTime.Now, bufferFile.sender) + bufferFile.extension;
-            FileInfo fi = new FileInfo(fileName);
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            saveDialog.InitialDirectory = @"C:\";
+            saveDialog.Title = "Lưu tập tin";
+            saveDialog.CheckFileExists = false;
+            saveDialog.CheckPathExists = true;
+            saveDialog.DefaultExt = bufferFile.extension;
+            saveDialog.Filter = "All files (*" + bufferFile.extension + ")|*" + bufferFile.extension + "";
+            saveDialog.FilterIndex = 2;
+            saveDialog.RestoreDirectory = true;
+            saveDialog.FileName = String.Format("{0:yyyy-MM-dd HH-mm-ss}__{1}", DateTime.Now, bufferFile.sender) + bufferFile.extension;
 
-            try
+            if (saveDialog.ShowDialog() == DialogResult.OK)
             {
-                // Check if file already exists. If yes, delete it.     
-                if (fi.Exists)
-                {
-                    fi.Delete();
-                }
+                FileInfo fi = new FileInfo(saveDialog.FileName);
 
-                using (FileStream fStream = File.Create(fileName))
+                try
                 {
-                    fStream.Write(bufferFile.buffer, 0, bufferFile.buffer.Length);
-                    fStream.Flush();
-                    fStream.Close();
+                    using (FileStream fStream = File.Create(fi.FullName))
+                    {
+                        fStream.Write(bufferFile.buffer, 0, bufferFile.buffer.Length);
+                        fStream.Flush();
+                        fStream.Close();
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    Console.WriteLine(Ex.ToString());
                 }
             }
-            catch (Exception Ex)
-            {
-                Console.WriteLine(Ex.ToString());
-            }
-
             this.Close();
         }
 

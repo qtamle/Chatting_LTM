@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Fuu51wQgqLA=",
+  "dgSpecHash": "VZUSPzGg+oI=",
   "success": true,
-  "projectFilePath": "D:\\HK6\\Lập Trình Mạng\\TiểuLuan\\Chatting-And-Drawing\\Chat-app Server\\Chat-app Server.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\asus\\Downloads\\Dang Lam 2024-10-29 [23.26.58] 303.T3\\LTM\\Chat-app Server\\Chat-app Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\asus\\.nuget\\packages\\litedb\\5.0.21\\litedb.5.0.21.nupkg.sha512",
+    "C:\\Users\\asus\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512"
+  ],
   "logs": []
 }

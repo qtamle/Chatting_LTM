@@ -2,6 +2,31 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
+      "LiteDB/5.0.21": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/LiteDB.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/LiteDB.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
       "Communicator/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -15,6 +40,57 @@
     }
   },
   "libraries": {
+    "LiteDB/5.0.21": {
+      "sha512": "ykJ7ffFl7P9YQKR/PLci6zupiLrsSCNkOTiw6OtzntH7d2kCYp5L1+3a/pksKgTEHcJBoPXFtg7VZSGVBseN9w==",
+      "type": "package",
+      "path": "litedb/5.0.21",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "AppVeyorSettings.json",
+        "LICENSE",
+        "icon_64x64.png",
+        "lib/net45/LiteDB.dll",
+        "lib/net45/LiteDB.xml",
+        "lib/netstandard1.3/LiteDB.dll",
+        "lib/netstandard1.3/LiteDB.xml",
+        "lib/netstandard2.0/LiteDB.dll",
+        "lib/netstandard2.0/LiteDB.xml",
+        "litedb.5.0.21.nupkg.sha512",
+        "litedb.nuspec"
+      ]
+    },
+    "System.Buffers/4.5.1": {
+      "sha512": "Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
+      "type": "package",
+      "path": "system.buffers/4.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Buffers.dll",
+        "lib/net461/System.Buffers.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net45/System.Buffers.dll",
+        "ref/net45/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "ref/uap10.0.16299/_._",
+        "system.buffers.4.5.1.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "Communicator/1.0.0": {
       "type": "project",
       "path": "../Communicator/Communicator.csproj",
@@ -23,27 +99,36 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "Communicator >= 1.0.0"
+      "Communicator >= 1.0.0",
+      "LiteDB >= 5.0.21"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ADMIN\\.nuget\\packages\\": {},
+    "C:\\Users\\asus\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\ComponentOne\\WinForms Edition\\bin\\v5\\": {},
+    "C:\\Program Files (x86)\\ComponentOne\\WinForms Edition\\bin\\v6\\": {},
+    "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HK6\\Lập Trình Mạng\\TiểuLuan\\Chatting-And-Drawing\\Chat-app Server\\Chat-app Server.csproj",
+      "projectUniqueName": "C:\\Users\\asus\\Downloads\\Dang Lam 2024-10-29 [23.26.58] 303.T3\\LTM\\Chat-app Server\\Chat-app Server.csproj",
       "projectName": "Chat-app Server",
-      "projectPath": "D:\\HK6\\Lập Trình Mạng\\TiểuLuan\\Chatting-And-Drawing\\Chat-app Server\\Chat-app Server.csproj",
-      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\HK6\\Lập Trình Mạng\\TiểuLuan\\Chatting-And-Drawing\\Chat-app Server\\obj\\",
+      "projectPath": "C:\\Users\\asus\\Downloads\\Dang Lam 2024-10-29 [23.26.58] 303.T3\\LTM\\Chat-app Server\\Chat-app Server.csproj",
+      "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\asus\\Downloads\\Dang Lam 2024-10-29 [23.26.58] 303.T3\\LTM\\Chat-app Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\ComponentOne\\WinForms Edition\\bin\\v5\\",
+        "C:\\Program Files (x86)\\ComponentOne\\WinForms Edition\\bin\\v6\\",
+        "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\ComponentOne.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -51,15 +136,19 @@
         "net6.0-windows"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\ComponentOne\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "D:\\WorkProject\\GunaUI Framework 2.0.1.4": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\HK6\\Lập Trình Mạng\\TiểuLuan\\Chatting-And-Drawing\\Communicator\\Communicator.csproj": {
-              "projectPath": "D:\\HK6\\Lập Trình Mạng\\TiểuLuan\\Chatting-And-Drawing\\Communicator\\Communicator.csproj"
+            "C:\\Users\\asus\\Downloads\\Dang Lam 2024-10-29 [23.26.58] 303.T3\\LTM\\Communicator\\Communicator.csproj": {
+              "projectPath": "C:\\Users\\asus\\Downloads\\Dang Lam 2024-10-29 [23.26.58] 303.T3\\LTM\\Communicator\\Communicator.csproj"
             }
           }
         }
@@ -72,12 +161,19 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "LiteDB": {
+            "target": "Package",
+            "version": "[5.0.21, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -97,7 +193,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11\\RuntimeIdentifierGraph.json"
       }
     }
   }

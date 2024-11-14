@@ -1,23 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HK6\\Lập Trình Mạng\\TiểuLuan\\Chatting-And-Drawing\\Communicator\\Communicator.csproj": {}
+    "C:\\Users\\asus\\Downloads\\Dang Lam 2024-10-29 [23.26.58] 303.T3\\LTM\\Communicator\\Communicator.csproj": {}
   },
   "projects": {
-    "D:\\HK6\\Lập Trình Mạng\\TiểuLuan\\Chatting-And-Drawing\\Communicator\\Communicator.csproj": {
+    "C:\\Users\\asus\\Downloads\\Dang Lam 2024-10-29 [23.26.58] 303.T3\\LTM\\Communicator\\Communicator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HK6\\Lập Trình Mạng\\TiểuLuan\\Chatting-And-Drawing\\Communicator\\Communicator.csproj",
+        "projectUniqueName": "C:\\Users\\asus\\Downloads\\Dang Lam 2024-10-29 [23.26.58] 303.T3\\LTM\\Communicator\\Communicator.csproj",
         "projectName": "Communicator",
-        "projectPath": "D:\\HK6\\Lập Trình Mạng\\TiểuLuan\\Chatting-And-Drawing\\Communicator\\Communicator.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\HK6\\Lập Trình Mạng\\TiểuLuan\\Chatting-And-Drawing\\Communicator\\obj\\",
+        "projectPath": "C:\\Users\\asus\\Downloads\\Dang Lam 2024-10-29 [23.26.58] 303.T3\\LTM\\Communicator\\Communicator.csproj",
+        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\asus\\Downloads\\Dang Lam 2024-10-29 [23.26.58] 303.T3\\LTM\\Communicator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Program Files (x86)\\ComponentOne\\WinForms Edition\\bin\\v5\\",
+          "C:\\Program Files (x86)\\ComponentOne\\WinForms Edition\\bin\\v6\\",
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\ComponentOne.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -25,7 +30,11 @@
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\ComponentOne\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "D:\\WorkProject\\GunaUI Framework 2.0.1.4": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -42,8 +51,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net6.0": {
@@ -64,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11\\RuntimeIdentifierGraph.json"
         }
       }
     }

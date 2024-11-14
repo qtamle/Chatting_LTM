@@ -46,7 +46,7 @@ namespace Chat_app_Client
             String jsonString = JsonSerializer.Serialize(group);
 
             // Tạo một đối tượng Json với loại "CREATE_GROUP" và dữ liệu là chuỗi JSON của đối tượng Group
-            Json json = new Json("CREATE_GROUP", jsonString);
+            CommandMsg json = new CommandMsg("CREATE_GROUP", jsonString);
 
             // Chuyển đối tượng Json thành mảng byte UTF-8 để truyền qua mạng
             byte[] jsonUtf8Bytes = JsonSerializer.SerializeToUtf8Bytes(json);

@@ -75,3 +75,54 @@ D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Chat-app Client\obj\D
 D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.pdb
 D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.genruntimeconfig.cache
 D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Chat-app Client\obj\Debug\net6.0-windows\ref\Chat-app Client.dll
+R:\LTM\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.exe
+R:\LTM\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.deps.json
+R:\LTM\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.runtimeconfig.json
+R:\LTM\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.dll
+R:\LTM\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.pdb
+R:\LTM\Chat-app Client\bin\Debug\net6.0-windows\Communicator.dll
+R:\LTM\Chat-app Client\bin\Debug\net6.0-windows\Communicator.pdb
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.csproj.AssemblyReference.cache
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.ChatBox.resources
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.Drawing.resources
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.GroupCreator.resources
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.ImageView.resources
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.Login.resources
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.Properties.Resources.resources
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.Signin.resources
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.csproj.GenerateResource.cache
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.GeneratedMSBuildEditorConfig.editorconfig
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.AssemblyInfoInputs.cache
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.AssemblyInfo.cs
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.csproj.CoreCompileInputs.cache
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app.E0B9E6C0.Up2Date
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.dll
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\refint\Chat-app Client.dll
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.pdb
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.genruntimeconfig.cache
+R:\LTM\Chat-app Client\obj\Debug\net6.0-windows\ref\Chat-app Client.dll
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.exe
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.deps.json
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.runtimeconfig.json
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.dll
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\bin\Debug\net6.0-windows\Chat-app Client.pdb
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\bin\Debug\net6.0-windows\Communicator.dll
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\bin\Debug\net6.0-windows\Communicator.pdb
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.csproj.AssemblyReference.cache
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.ChatBox.resources
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.GroupCreator.resources
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.ImageView.resources
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.Login.resources
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.Properties.Resources.resources
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat_app_Client.Signin.resources
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.csproj.GenerateResource.cache
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.AssemblyInfoInputs.cache
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.AssemblyInfo.cs
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.csproj.CoreCompileInputs.cache
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app.E0B9E6C0.Up2Date
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.dll
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\obj\Debug\net6.0-windows\refint\Chat-app Client.dll
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.pdb
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\obj\Debug\net6.0-windows\Chat-app Client.genruntimeconfig.cache
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Client\obj\Debug\net6.0-windows\ref\Chat-app Client.dll

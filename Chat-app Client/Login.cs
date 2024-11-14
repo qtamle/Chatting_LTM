@@ -60,14 +60,14 @@ namespace Chat_app_Client
         {
             Account account = new Account(txtLoginUsername.Text, txtLoginPassword.Text);
             String accountJson = JsonSerializer.Serialize(account);
-            Json json = new Json("LOGIN", accountJson);
+            CommandMsg json = new CommandMsg("LOGIN", accountJson);
 
             // Gửi dữ liệu đăng nhập tới server.
             sendJson(json, server);
 
             // Nhận phản hồi từ server.
             accountJson = streamReader.ReadLine();
-            Json? feedback = JsonSerializer.Deserialize<Json?>(accountJson);
+            CommandMsg? feedback = JsonSerializer.Deserialize<CommandMsg?>(accountJson);
 
             try
             {
@@ -100,7 +100,7 @@ namespace Chat_app_Client
             }
         }
 
-        private void sendJson(Json json, TcpClient client)
+        private void sendJson(CommandMsg json, TcpClient client)
         {
             byte[] jsonUtf8Bytes = JsonSerializer.SerializeToUtf8Bytes(json);
             String S = Encoding.ASCII.GetString(jsonUtf8Bytes, 0, jsonUtf8Bytes.Length);

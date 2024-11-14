@@ -111,6 +111,7 @@
             // 
             // rtbDialog
             // 
+            rtbDialog.BackColor = Color.LightGray;
             rtbDialog.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             rtbDialog.Location = new Point(205, 57);
             rtbDialog.Margin = new Padding(3, 4, 3, 4);
@@ -162,7 +163,7 @@
             lblWelcome.ForeColor = Color.DarkSlateGray;
             lblWelcome.Location = new Point(14, 12);
             lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(131, 28);
+            lblWelcome.Size = new Size(133, 28);
             lblWelcome.TabIndex = 4;
             lblWelcome.Text = "Welcome, ...";
             // 

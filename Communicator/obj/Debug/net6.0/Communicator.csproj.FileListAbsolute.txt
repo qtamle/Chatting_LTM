@@ -32,3 +32,25 @@ D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Communicator\obj\Debu
 D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Communicator\obj\Debug\net6.0\refint\Communicator.dll
 D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Communicator\obj\Debug\net6.0\Communicator.pdb
 D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Communicator\obj\Debug\net6.0\ref\Communicator.dll
+R:\LTM\Communicator\bin\Debug\net6.0\Communicator.deps.json
+R:\LTM\Communicator\bin\Debug\net6.0\Communicator.dll
+R:\LTM\Communicator\bin\Debug\net6.0\Communicator.pdb
+R:\LTM\Communicator\obj\Debug\net6.0\Communicator.GeneratedMSBuildEditorConfig.editorconfig
+R:\LTM\Communicator\obj\Debug\net6.0\Communicator.AssemblyInfoInputs.cache
+R:\LTM\Communicator\obj\Debug\net6.0\Communicator.AssemblyInfo.cs
+R:\LTM\Communicator\obj\Debug\net6.0\Communicator.csproj.CoreCompileInputs.cache
+R:\LTM\Communicator\obj\Debug\net6.0\Communicator.dll
+R:\LTM\Communicator\obj\Debug\net6.0\refint\Communicator.dll
+R:\LTM\Communicator\obj\Debug\net6.0\Communicator.pdb
+R:\LTM\Communicator\obj\Debug\net6.0\ref\Communicator.dll
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Communicator\bin\Debug\net6.0\Communicator.deps.json
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Communicator\bin\Debug\net6.0\Communicator.dll
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Communicator\bin\Debug\net6.0\Communicator.pdb
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Communicator\obj\Debug\net6.0\Communicator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Communicator\obj\Debug\net6.0\Communicator.AssemblyInfoInputs.cache
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Communicator\obj\Debug\net6.0\Communicator.AssemblyInfo.cs
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Communicator\obj\Debug\net6.0\Communicator.csproj.CoreCompileInputs.cache
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Communicator\obj\Debug\net6.0\Communicator.dll
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Communicator\obj\Debug\net6.0\refint\Communicator.dll
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Communicator\obj\Debug\net6.0\Communicator.pdb
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Communicator\obj\Debug\net6.0\ref\Communicator.dll

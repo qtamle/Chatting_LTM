@@ -41,7 +41,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label1.ForeColor = Color.DarkSlateGray;
-            label1.Location = new Point(14, 12);
+            label1.Location = new Point(12, 7);
             label1.Name = "label1";
             label1.Size = new Size(211, 28);
             label1.TabIndex = 3;
@@ -50,19 +50,19 @@
             // txtGroupName
             // 
             txtGroupName.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txtGroupName.Location = new Point(14, 75);
+            txtGroupName.Location = new Point(12, 70);
             txtGroupName.Margin = new Padding(3, 4, 3, 4);
             txtGroupName.Name = "txtGroupName";
-            txtGroupName.Size = new Size(194, 26);
+            txtGroupName.Size = new Size(249, 26);
             txtGroupName.TabIndex = 0;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            label2.Location = new Point(14, 51);
+            label2.Location = new Point(12, 46);
             label2.Name = "label2";
-            label2.Size = new Size(98, 19);
+            label2.Size = new Size(99, 19);
             label2.TabIndex = 4;
             label2.Text = "Group Name";
             // 
@@ -70,7 +70,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            label3.Location = new Point(14, 109);
+            label3.Location = new Point(12, 104);
             label3.Name = "label3";
             label3.Size = new Size(74, 19);
             label3.TabIndex = 5;
@@ -79,10 +79,10 @@
             // txtMembers
             // 
             txtMembers.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txtMembers.Location = new Point(14, 133);
+            txtMembers.Location = new Point(12, 128);
             txtMembers.Margin = new Padding(3, 4, 3, 4);
             txtMembers.Name = "txtMembers";
-            txtMembers.Size = new Size(194, 26);
+            txtMembers.Size = new Size(249, 26);
             txtMembers.TabIndex = 1;
             // 
             // btnCreate
@@ -91,10 +91,10 @@
             btnCreate.FlatStyle = FlatStyle.Flat;
             btnCreate.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnCreate.ForeColor = Color.LightCyan;
-            btnCreate.Location = new Point(14, 187);
+            btnCreate.Location = new Point(12, 182);
             btnCreate.Margin = new Padding(3, 4, 3, 4);
             btnCreate.Name = "btnCreate";
-            btnCreate.Size = new Size(194, 36);
+            btnCreate.Size = new Size(249, 36);
             btnCreate.TabIndex = 2;
             btnCreate.Text = "Create";
             btnCreate.UseVisualStyleBackColor = false;
@@ -104,7 +104,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(224, 244);
+            ClientSize = new Size(273, 238);
             Controls.Add(btnCreate);
             Controls.Add(txtMembers);
             Controls.Add(label3);
@@ -113,7 +113,7 @@
             Controls.Add(label1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "GroupCreator";
-            Text = "Create a New Grou[";
+            Text = "Tạo nhóm mới";
             Load += GroupCreator_Load;
             ResumeLayout(false);
             PerformLayout();

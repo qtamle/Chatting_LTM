@@ -59,3 +59,45 @@ D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Chat-app Server\obj\D
 D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.pdb
 D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.genruntimeconfig.cache
 D:\HK6\Lập Trình Mạng\TiểuLuan\Chatting-And-Drawing\Chat-app Server\obj\Debug\net6.0-windows\ref\Chat-app Server.dll
+R:\LTM\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.exe
+R:\LTM\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.deps.json
+R:\LTM\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.runtimeconfig.json
+R:\LTM\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.dll
+R:\LTM\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.pdb
+R:\LTM\Chat-app Server\bin\Debug\net6.0-windows\Communicator.dll
+R:\LTM\Chat-app Server\bin\Debug\net6.0-windows\Communicator.pdb
+R:\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.csproj.AssemblyReference.cache
+R:\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat_app_Server.Server.resources
+R:\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.csproj.GenerateResource.cache
+R:\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.GeneratedMSBuildEditorConfig.editorconfig
+R:\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.AssemblyInfoInputs.cache
+R:\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.AssemblyInfo.cs
+R:\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.csproj.CoreCompileInputs.cache
+R:\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app.B05670A3.Up2Date
+R:\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.dll
+R:\LTM\Chat-app Server\obj\Debug\net6.0-windows\refint\Chat-app Server.dll
+R:\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.pdb
+R:\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.genruntimeconfig.cache
+R:\LTM\Chat-app Server\obj\Debug\net6.0-windows\ref\Chat-app Server.dll
+R:\LTM\Chat-app Server\bin\Debug\net6.0-windows\LiteDB.dll
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.exe
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.deps.json
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.runtimeconfig.json
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.dll
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\bin\Debug\net6.0-windows\Chat-app Server.pdb
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\bin\Debug\net6.0-windows\LiteDB.dll
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\bin\Debug\net6.0-windows\Communicator.dll
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\bin\Debug\net6.0-windows\Communicator.pdb
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.csproj.AssemblyReference.cache
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat_app_Server.Server.resources
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.csproj.GenerateResource.cache
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.AssemblyInfoInputs.cache
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.AssemblyInfo.cs
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.csproj.CoreCompileInputs.cache
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app.B05670A3.Up2Date
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.dll
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\obj\Debug\net6.0-windows\refint\Chat-app Server.dll
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.pdb
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\obj\Debug\net6.0-windows\Chat-app Server.genruntimeconfig.cache
+C:\Users\asus\Downloads\Dang Lam 2024-10-29 [23.26.58] 303.T3\LTM\Chat-app Server\obj\Debug\net6.0-windows\ref\Chat-app Server.dll

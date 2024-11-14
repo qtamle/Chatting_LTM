@@ -51,7 +51,8 @@ namespace Chat_app_Client
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            if (txtMessage.Text == "" || txtReceiver.Text == "")
+            if (txtMessage.Text == "" 
+                || txtReceiver.Text == "")
             {
                 MessageBox.Show("Empty Fields", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -63,9 +64,11 @@ namespace Chat_app_Client
                 return;
             }
 
-            Messages messages = new Messages(this.name, txtReceiver.Text, txtMessage.Text); // Tạo đối tượng tin nhắn
+            ChatMsg messages;
+           messages = new ChatMsg(this.name, txtReceiver.Text, txtMessage.Text, is_group_msg); // Tạo đối tượng tin nhắn
+           
             String messageJson = JsonSerializer.Serialize(messages); // Chuyển đổi tin nhắn sang định dạng JSON
-            Json json = new Json("MESSAGE", messageJson); // Tạo đối tượng JSON cho tin nhắn
+            CommandMsg json = new CommandMsg("MESSAGE", messageJson); // Tạo đối tượng JSON cho tin nhắn
             sendJson(json);
 
             txtMessage.Clear();
@@ -80,16 +83,38 @@ namespace Chat_app_Client
             }
         }
 
+        private void getOldMessages(string sender, string receiver)
+        {
+            var jsonContent = JsonSerializer.Serialize(new OldMsgRequest()
+            {
+                sender = sender,
+                receiver = receiver,
+                is_group_msg = is_group_msg
+            });
+
+            CommandMsg cmd = new CommandMsg("GET_OLD_MESSAGES", jsonContent);
+            sendJson(cmd);
+        }
+
+        // Đang chọn nhóm
+        bool is_group_msg = false;
+
         // Hàm sự kiện khi nhấn vào một ô trong bảng nhóm
         private void tblGroup_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtReceiver.Text = tblGroup.Rows[e.RowIndex].Cells[0].Value.ToString();
+            is_group_msg = true;
+            rtbDialog.Clear();
+            getOldMessages(this.name, txtReceiver.Text);
         }
 
         // Hàm sự kiện khi nhấn vào một ô trong bảng người dùng
         private void tblUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtReceiver.Text = tblUser.Rows[e.RowIndex].Cells["Online"].Value.ToString();
+            is_group_msg = false;
+            rtbDialog.Clear();
+            getOldMessages(this.name, txtReceiver.Text);
         }
 
         // Hàm sự kiện khi bấm nút Tạo nhóm
@@ -111,7 +136,7 @@ namespace Chat_app_Client
                 try
                 {
                     OpenFileDialog ofd = new OpenFileDialog();
-                    //ofd.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
+                    ofd.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| Bitmap file(*.bmp)|*.bmp";
                     if (ofd.ShowDialog() == DialogResult.OK)
                     {
                         String fName = ofd.FileName;
@@ -123,14 +148,14 @@ namespace Chat_app_Client
                             fName = fName.Substring(fName.IndexOf("/") + 1);
                         }
 
-                        FileMessage message = new FileMessage(this.name, txtReceiver.Text, File.ReadAllBytes(path + fName).Length.ToString(), Path.GetExtension(ofd.FileName));
+                        FileMsg message = new FileMsg(this.name, txtReceiver.Text, File.ReadAllBytes(path + fName).Length.ToString(), Path.GetExtension(ofd.FileName));
 
-                        Json json = new Json("FILE", JsonSerializer.Serialize(message));
+                        CommandMsg json = new CommandMsg("FILE", JsonSerializer.Serialize(message));
                         sendJson(json);
 
                         server.Client.SendFile(path + fName);
 
-                        AppendRichTextBox(this.name, message.receiver, "The file was sent.", "");
+                        AppendRichTextBox(DateTime.Now, this.name, message.receiver, "The file was sent.", "");
                     }
                 }
                 catch (Exception)
@@ -145,7 +170,7 @@ namespace Chat_app_Client
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Json json = new Json("LOGOUT", this.name);
+            CommandMsg json = new CommandMsg("LOGOUT", this.name);
             sendJson(json);
             new Thread(() => Application.Run(new Login())).Start();
             threadActive = false;
@@ -159,10 +184,32 @@ namespace Chat_app_Client
                 try
                 {
                     String jsonString = streamReader.ReadLine();
-                    Json? infoJson = JsonSerializer.Deserialize<Json?>(jsonString);
+                    CommandMsg? infoJson = JsonSerializer.Deserialize<CommandMsg?>(jsonString);
 
                     switch (infoJson.type)
                     {
+                        case "GET_OLD_MESSAGES_FEEDBACK":
+
+                            if (infoJson.content != null)
+                            {
+                                List<ChatMsg> chatMsgs = JsonSerializer.Deserialize<List<ChatMsg>>(infoJson.content);
+                                
+                                if (chatMsgs != null)
+                                {
+                                    foreach (var message in chatMsgs)
+                                    {
+
+                                        if (message.sender != this.name)
+                                        {
+                                            AppendRichTextBox(message.time, message.sender, message.receiver, message.message, "");
+                                        }
+                                        else
+                                            AppendRichTextBox(message.time, message.sender, message.receiver, message.message, "");
+                                    }
+                                } 
+                            }
+                            break;
+
                         case "STARTUP_FEEDBACK":
                             cleanDataGridView(tblGroup);
                             cleanDataGridView(tblUser);
@@ -184,14 +231,14 @@ namespace Chat_app_Client
                         case "MESSAGE":
                             if (infoJson.content != null)
                             {
-                                Messages message = JsonSerializer.Deserialize<Messages?>(infoJson.content);
+                                ChatMsg message = JsonSerializer.Deserialize<ChatMsg?>(infoJson.content);
                                 if (message != null)
                                 {
                                     if (message.sender != this.name)
                                     {
-                                        AppendRichTextBox(message.sender, message.receiver, message.message, "");
+                                        AppendRichTextBox(message.time, message.sender, message.receiver, message.message, "");
                                     }
-                                    else AppendRichTextBox(message.sender, message.receiver, message.message, "");
+                                    else AppendRichTextBox(message.time, message.sender, message.receiver, message.message, "");
                                 }
                             }
                             break;
@@ -203,9 +250,11 @@ namespace Chat_app_Client
 
                                 if (ImageExtensions.Contains(bufferFile.extension.ToUpper()))
                                 {
-                                    new Thread(()=> Application.Run(new ImageView(bufferFile))).Start() ;
+                                    var thread = new Thread(() => Application.Run(new ImageView(bufferFile)));
+                                    thread.SetApartmentState(ApartmentState.STA);
+                                    thread.Start() ;
 
-                                    AppendRichTextBox(bufferFile.sender, bufferFile.receiver, "Shared the " + bufferFile.extension + " file in ", @Environment.CurrentDirectory);
+                                    AppendRichTextBox(DateTime.Now, bufferFile.sender, bufferFile.receiver, "Shared the " + bufferFile.extension + " file in ", @Environment.CurrentDirectory);
                                 }
                                 else
                                 {
@@ -232,7 +281,7 @@ namespace Chat_app_Client
                                         Console.WriteLine(Ex.ToString());
                                     }
 
-                                    AppendRichTextBox(bufferFile.sender, bufferFile.receiver, "Shared the " + bufferFile.extension + " file in ", @Environment.CurrentDirectory);
+                                    AppendRichTextBox(DateTime.Now, bufferFile.sender, bufferFile.receiver, "Shared the " + bufferFile.extension + " file in ", @Environment.CurrentDirectory);
                                 }
                             }
                             break;
@@ -246,11 +295,19 @@ namespace Chat_app_Client
             }
         }
 
-        private void AppendRichTextBox(string sender, string receiver, string message, string link)
+        private void AppendRichTextBox(DateTime time, string sender, string receiver, string message, string link = "")
         {
             rtbDialog.BeginInvoke(new MethodInvoker(() =>
             {
                 Font currentFont = rtbDialog.SelectionFont;
+
+                // Time
+                rtbDialog.SelectionStart = rtbDialog.TextLength;
+                rtbDialog.SelectionLength = 0;
+                rtbDialog.SelectionColor = Color.AliceBlue;
+                rtbDialog.SelectionFont = new Font(currentFont.FontFamily, currentFont.Size, FontStyle.Bold);
+                rtbDialog.AppendText(time.ToString("dd/MM/yyyy HH:MM:ss") + " ");
+                rtbDialog.SelectionColor = rtbDialog.ForeColor;
 
                 //Username
                 rtbDialog.SelectionStart = rtbDialog.TextLength;
@@ -286,9 +343,9 @@ namespace Chat_app_Client
 
                 if (sender == this.name)
                 {
-                    rtbDialog.SelectionAlignment = HorizontalAlignment.Right;
+                    rtbDialog.SelectionAlignment = HorizontalAlignment.Left;
                 }
-                else rtbDialog.SelectionAlignment = HorizontalAlignment.Left;
+                else rtbDialog.SelectionAlignment = HorizontalAlignment.Right;
 
                 rtbDialog.AppendText(Environment.NewLine);
             }));
@@ -308,7 +365,7 @@ namespace Chat_app_Client
             dataGridView.Invoke(new Action(() => { dataGridView.Rows.Add(array); }));
         }
 
-        private void sendJson(Json json)
+        private void sendJson(CommandMsg json)
         {
             byte[] jsonUtf8Bytes = JsonSerializer.SerializeToUtf8Bytes(json);
             String S = Encoding.ASCII.GetString(jsonUtf8Bytes, 0, jsonUtf8Bytes.Length);
@@ -332,9 +389,9 @@ namespace Chat_app_Client
                 return;
             }
 
-            Messages messages = new Messages(this.name, txtReceiver.Text, "👍");
+            ChatMsg messages = new ChatMsg(this.name, txtReceiver.Text, "👍", is_group_msg);
             String messageJson = JsonSerializer.Serialize(messages);
-            Json json = new Json("MESSAGE", messageJson);
+            CommandMsg json = new CommandMsg("MESSAGE", messageJson);
             sendJson(json);
 
             txtMessage.Clear();
@@ -354,9 +411,9 @@ namespace Chat_app_Client
                 return;
             }
 
-            Messages messages = new Messages(this.name, txtReceiver.Text, "🥰");
+            ChatMsg messages = new ChatMsg(this.name, txtReceiver.Text, "🥰", is_group_msg);
             String messageJson = JsonSerializer.Serialize(messages);
-            Json json = new Json("MESSAGE", messageJson);
+            CommandMsg json = new CommandMsg("MESSAGE", messageJson);
             sendJson(json);
 
             txtMessage.Clear();
@@ -376,9 +433,9 @@ namespace Chat_app_Client
                 return;
             }
 
-            Messages messages = new Messages(this.name, txtReceiver.Text, "🤣");
+            ChatMsg messages = new ChatMsg(this.name, txtReceiver.Text, "🤣", is_group_msg);
             String messageJson = JsonSerializer.Serialize(messages);
-            Json json = new Json("MESSAGE", messageJson);
+            CommandMsg json = new CommandMsg("MESSAGE", messageJson);
             sendJson(json);
 
             txtMessage.Clear();
@@ -398,9 +455,9 @@ namespace Chat_app_Client
                 return;
             }
 
-            Messages messages = new Messages(this.name, txtReceiver.Text, "😭");
+            ChatMsg messages = new ChatMsg(this.name, txtReceiver.Text, "😭", is_group_msg);
             String messageJson = JsonSerializer.Serialize(messages);
-            Json json = new Json("MESSAGE", messageJson);
+            CommandMsg json = new CommandMsg("MESSAGE", messageJson);
             sendJson(json);
 
             txtMessage.Clear();
@@ -420,9 +477,9 @@ namespace Chat_app_Client
                 return;
             }
 
-            Messages messages = new Messages(this.name, txtReceiver.Text, "😈");
+            ChatMsg messages = new ChatMsg(this.name, txtReceiver.Text, "😈", is_group_msg);
             String messageJson = JsonSerializer.Serialize(messages);
-            Json json = new Json("MESSAGE", messageJson);
+            CommandMsg json = new CommandMsg("MESSAGE", messageJson);
             sendJson(json);
 
             txtMessage.Clear();
@@ -430,7 +487,7 @@ namespace Chat_app_Client
 
         private void ChatBox_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Json json = new Json("LOGOUT", this.name);
+            CommandMsg json = new CommandMsg("LOGOUT", this.name);
             sendJson(json);
             threadActive = false;
         }
