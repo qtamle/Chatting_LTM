@@ -26,13 +26,8 @@ Hướng dẫn Cài đặt và Sử dụng
 
 Bước 1: Cài đặt
 Clone repository:
-bash
-Sao chép mã
-git clone <repository-url>
-Cài đặt các thư viện phụ thuộc:
-bash
-Sao chép mã
-dotnet restore
+git clone <https://github.com/qtamle/Chatting_LTM.git>
+
 Bước 2: Cài đặt và chạy ứng dụng
 Chạy Client:
 
@@ -59,7 +54,7 @@ Người dùng có thể gửi tin nhắn văn bản, hình ảnh, và tệp tin
 
 Khi người dùng đăng xuất, ứng dụng sẽ ngắt kết nối và đưa họ quay lại màn hình đăng nhập.
 Giao diện Sản phẩm
-3.2.1 Giao diện Đăng ký
+Giao diện Đăng ký
 Tên chức năng: Đăng ký tài khoản
 Mô tả chức năng: Cho phép người dùng nhập tên tài khoản và mật khẩu để tạo tài khoản mới trên hệ thống.
 Chi tiết giao diện:
@@ -67,7 +62,7 @@ Trường "Server IP": Nhập địa chỉ IP của server.
 Trường "Username": Nhập tên tài khoản.
 Trường "Password": Nhập mật khẩu.
 Nút "Đăng ký": Gửi yêu cầu đăng ký tới server và chuyển hướng đến màn hình chính nếu thành công.
-3.2.2 Giao diện Đăng nhập
+Giao diện Đăng nhập
 Tên chức năng: Đăng nhập vào hệ thống
 Mô tả chức năng: Cho phép người dùng đăng nhập vào hệ thống thông qua tài khoản đã tạo trước đó.
 Quy trình chức năng:
