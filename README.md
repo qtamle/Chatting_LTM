@@ -54,12 +54,17 @@ Người dùng có thể gửi tin nhắn văn bản, hình ảnh, và tệp tin
 
 Khi người dùng đăng xuất, ứng dụng sẽ ngắt kết nối và đưa họ quay lại màn hình đăng nhập.
 Giao diện Sản phẩm
+
 Giao diện Đăng ký
+
 Tên chức năng: Đăng ký tài khoản
 Mô tả chức năng: Cho phép người dùng nhập tên tài khoản và mật khẩu để tạo tài khoản mới trên hệ thống.
 Chi tiết giao diện:
+
 Trường "Server IP": Nhập địa chỉ IP của server.
+
 Trường "Username": Nhập tên tài khoản.
+
 Trường "Password": Nhập mật khẩu.
 Nút "Đăng ký": Gửi yêu cầu đăng ký tới server và chuyển hướng đến màn hình chính nếu thành công.
 Giao diện Đăng nhập
